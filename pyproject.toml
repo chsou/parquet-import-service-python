@@ -1,0 +1,50 @@
+[project]
+name = "python-ms"
+version = "0.0.0"
+authors = [{name="Cumulocity GmbH"}]
+description = "Test service."
+license = {file = "LICENSE"}
+requires-python = ">=3.11"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.11",
+    "Development Status :: 4 - Beta",
+    "License :: OSI Approved :: Apache Software License",
+    "Operating System :: OS Independent",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+]
+dependencies = [
+    "fastapi",
+    "pyc8y",
+    "python-dotenv",
+    "uvicorn",
+]
+
+[project.urls]
+Homepage = "https://github.com/chisou/cumulocity-python-sdk"
+Source = "https://github.com/chisou/cumulocity-python-sdk"
+Issues = "https://github.com/chisou/cumulocity-python-sdk/issues"
+Documentation = "https://cumulocity-python-sdk.readthedocs.io/en/latest/"
+
+[dependency-groups]
+dev = [
+    "ruff",
+]
+
+[tool.uv]
+package = false
+
+#[tool.uv.sources]
+#pyc8y = { path = "../cumulocity-python-sdk", editable = true }
+
+[tool.ruff]
+line-length = 120
+target-version = "py311"
+
+[tool.ruff.lint]
+extend-select = ["Q"]
+
+[tool.ruff.lint.flake8-quotes]
+inline-quotes = "double"
+multiline-quotes = "double"
+docstring-quotes = "double"
