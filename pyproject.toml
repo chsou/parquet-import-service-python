@@ -18,6 +18,7 @@ dependencies = [
     "pyc8y",
     "python-dotenv",
     "uvicorn",
+    "pyarrow",
 ]
 
 [project.urls]
@@ -29,6 +30,7 @@ Documentation = "https://cumulocity-python-sdk.readthedocs.io/en/latest/"
 [dependency-groups]
 dev = [
     "ruff",
+    "numpy",
 ]
 
 [tool.uv]
